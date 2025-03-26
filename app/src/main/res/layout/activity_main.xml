@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitiesandfragments.MainActivity"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_homefragment"
+            android:background="#2196F3"
+
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation_bar" />
+
+   <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:id="@+id/bottom_navigation_bar"
+
+       app:mbn_backgroundBottomColor="#232860"
+       app:mbn_circleColor="#1ba3c1"
+       app:mbn_selectedIconColor="@color/white"
+       app:mbn_rippleColor="@color/black"/>
+
+
+</RelativeLayout>
+</LinearLayout>

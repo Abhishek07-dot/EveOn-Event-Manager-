@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activitiesandfragments.HomeFragment"
+    android:background="@drawable/full_image1"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_view"
+        app:searchIcon="@drawable/baseline_search_24"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:queryHint="Search Events..."
+        app:iconifiedByDefault="false"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          android:layout_below="@+id/search_home" >
+       <RelativeLayout
+           android:id="@+id/linear_layout_running_event"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:orientation="horizontal"
+           >
+           <TextView
+               android:id="@+id/running_event"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Running Events"
+               android:textSize="20dp"
+               android:layout_marginStart="15dp"
+               android:textColor="@color/black"
+               android:textStyle="bold"
+
+              />
+
+           <ImageView
+               android:id="@+id/image_running_event"
+               android:layout_width="wrap_content"
+               android:layout_height="24dp"
+               android:layout_alignEnd="@+id/running_event"
+
+
+
+
+               android:layout_marginTop="3dp"
+               android:layout_marginEnd="-50dp"
+               android:layout_marginRight="-50dp"
+               android:src="@drawable/baseline_circle_red" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+
+               android:layout_alignEnd="@+id/image_running_event"
+               android:layout_marginEnd="-50dp"
+               android:layout_marginRight="-48dp"
+               android:text="LIVE"
+               android:layout_marginTop="3dp"
+
+               android:textColor="#FF1201"
+               android:textSize="18dp"
+               android:textStyle="bold" />
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recycler_view_running"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/running_event"
+               android:layout_marginStart="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginEnd="10dp"
+               android:layout_marginBottom="10dp"
+
+               tools:itemCount="2" />
+           <TextView
+               android:id="@+id/upcoming_event"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/recycler_view_running"
+               android:text="Upcoming Events"
+               android:layout_marginTop="10dp"
+              android:layout_marginStart="15dp"
+               android:textSize="20dp"
+               android:textColor="@color/black"
+               android:textStyle="bold"/>
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/upcoming_recycler"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/upcoming_event"
+               tools:itemCount="2"
+               android:layout_marginTop="20dp"
+             android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:layout_marginBottom="10dp"
+
+               />
+           <TextView
+               android:layout_below="@+id/upcoming_recycler"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/past_events"
+               android:text="Past Events"
+               android:layout_marginStart="15dp"
+               android:textSize="20dp"
+               android:layout_marginTop="10dp"
+               android:textColor="@color/black"
+               android:textStyle="bold"/>
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/past_recycler_view"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/past_events"
+               tools:itemCount="2"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"
+               android:layout_marginBottom="10dp"
+
+               />
+
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignEnd="@+id/past_events"
+
+               android:layout_alignBottom="@+id/upcoming_recycler"
+               android:layout_marginTop="3dp"
+
+               android:layout_marginEnd="204dp"
+               android:layout_marginBottom="-47dp"
+               android:src="@drawable/baseline_circle_grey" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignEnd="@+id/past_events"
+               android:layout_alignRight="@+id/past_events"
+               android:layout_alignBottom="@+id/upcoming_recycler"
+               android:layout_marginTop="3dp"
+               android:layout_marginEnd="151dp"
+               android:layout_marginRight="151dp"
+               android:layout_marginBottom="-47dp"
+               android:text="PAST"
+               android:textColor="#999999"
+               android:textSize="18dp"
+               android:textStyle="bold" />
+
+       </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#9D67FB"
+        android:src="@drawable/baseline_post_add_24"
+        />
+    </RelativeLayout>
